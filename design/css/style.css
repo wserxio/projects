@@ -1,0 +1,218 @@
+/*
+YUI 3.18.1
+Copyright 2014 Yahoo! Inc. All rights reserved.
+Licensed under the BSD License.
+http://yuilibrary.com/license/
+*/
+/*
+	TODO will need to remove settings on HTML since we can't namespace it.
+	TODO with the prefix, should I group by selector or property for weight savings?
+*/
+html{
+	color:#000;
+	background:#FFF;
+}
+/*
+	TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+	TODO test putting a class on HEAD.
+		- Fails on FF.
+*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin:0;
+	padding:0;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+fieldset,
+img {
+	border:0;
+}
+/*
+	TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit...
+*/
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+	font-style:normal;
+	font-weight:normal;
+}
+
+ol,
+ul {
+	list-style:none;
+}
+
+caption,
+th {
+	text-align:left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size:100%;
+	font-weight:normal;
+}
+q:before,
+q:after {
+	content:'';
+}
+abbr,
+acronym {
+	border:0;
+	font-variant:normal;
+}
+/* to preserve line-height and selector appearance */
+sup {
+	vertical-align:text-top;
+}
+sub {
+	vertical-align:text-bottom;
+}
+input,
+textarea,
+select {
+	font-family:inherit;
+	font-size:inherit;
+	font-weight:inherit;
+	*font-size:100%; /*to enable resizing for IE*/
+}
+/*because legend doesn't inherit in IE */
+legend {
+	color:#000;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  transition: all ease .2s;
+}
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset { display: none; }
+
+/* my styles */
+.container {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  outline: 1px solid rgba(0,0,0,.1);
+  min-height: 1px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row {
+  position: relative;
+  display: block;
+  margin: 0 100px;
+  padding: 15px 0;
+  font-size: 0;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  text-transform: uppercase;
+  border-radius: 3px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/* blue */
+.btn--blue {
+  background-color: rgb(77, 123, 223);
+  color: white;
+  box-shadow: 0 4px 0 0 rgb(67, 106, 192);
+}
+.btn--blue:hover {
+  box-shadow: 0 6px 0 0 rgb(67, 106, 192);
+  transform: translateY(-2px);
+}
+.btn--blue:active {
+  box-shadow: 0 0 0 0 rgb(67, 106, 192);
+  transform: translateY(4px);
+}
+/* red */
+.btn--red {
+  background-color: rgb(223, 77, 77);
+  color: white;
+  box-shadow: 0 4px 0 0 rgb(192, 67, 67);
+}
+.btn--red:hover {
+  box-shadow: 0 6px 0 0 rgb(192, 67, 67);
+  transform: translateY(-2px);
+}
+.btn--red:active {
+  box-shadow: 0 0 0 0 rgb(192, 67, 67);
+  transform: translateY(4px);
+}
+/* green */
+.btn--green {
+  background-color: rgb(77, 223, 109);
+  color: white;
+  box-shadow: 0 4px 0 0 rgb(67, 192, 109);
+}
+.btn--green:hover {
+  box-shadow: 0 6px 0 0 rgb(67, 192, 109);
+  transform: translateY(-2px);
+}
+.btn--green:active {
+  box-shadow: 0 0 0 0 rgb(67, 192, 109);
+  transform: translateY(4px);
+}
+
+/* big */
+.btn--big {
+  font-size: 24px;
+  line-height: 1.4em;
+  padding: 10px 25px;
+}
+/* mid */
+.btn--mid {
+  font-size: 18px;
+  line-height: 1.4em;
+  padding: 10px 25px;
+}
+/* normal */
+.btn--normal {
+  font-size: 14px;
+  line-height: 1.4em;
+  padding: 10px 25px;
+}
