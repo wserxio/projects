@@ -216,3 +216,52 @@ legend {
   line-height: 1.4em;
   padding: 10px 25px;
 }
+
+/* tmblr */
+.tmblr {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px;
+  width: 30px;
+  height: 70px;
+  background: linear-gradient(180deg, red, darkred);
+  border-radius: 3px;
+  transform: perspective(200px) rotateX(-25deg);
+  box-shadow:
+    0 -10px 10px 0 rgba(0,0,0,.1);
+  cursor: pointer;
+}
+.tmblr:active {
+  transform: rotateX(25deg);
+}
+.tmblr:visited {
+  transform: rotateX(25deg);
+}
+.tmblr:before {
+  content: 'I';
+  position: absolute;
+  display: block;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+}
+.tmblr:after {
+  content: '0';
+  position: absolute;
+  display: block;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+}
+
+input[type="checkbox"]#tmblr:checked ~ label.tmblr {
+  transform: perspective(200px) rotateX(25deg);
+  box-shadow:
+    0 10px 10px 0 rgba(0,0,0,.1);
+    background: linear-gradient(180deg,darkred, red);
+}
