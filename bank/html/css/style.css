@@ -322,6 +322,7 @@ html {
 .special-offers {
   position: relative;
   display: block;
+  margin: 20px 0 70px;
   padding: 30px 60px;
   background: var(--color-white);
   border-bottom: 2px solid #cfd5da;
@@ -520,4 +521,50 @@ html {
   display: inline-block;
   margin-left: 10px;
   background-position: -80px 0;
+}
+/* footer menu */
+.footer__menu {
+  list-style: none;
+  padding: 0;
+  margin: 45px 0 0 0;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 90px;
+}
+.footer__menu-link {
+  position: relative;
+  display: block;
+  font-family: var(--fontMedium);
+  font-size: var(--main-fontSize);
+  color: var(--color-white);
+  line-height: 1.8em;
+  text-decoration: none;
+  margin-right: 70px;
+}
+.footer__menu-link::first-letter {
+  text-transform: uppercase;
+}
+
+.credits {
+  font-family: var(--font);
+  font-size: var(--main-fontSize);
+  line-height: 25px;
+  color: var(--color-darkBlue);
+}
+.license {
+  font-family: var(--font);
+  font-size: var(--license-fontSize);
+  line-height: 25px;
+  color: rgb(var(--color-darkGreen));
+}
+.rights {
+  font-family: var(--fontMedium);
+  font-size: var(--license-fontSize);
+  line-height: 25px;
+  color: rgb(var(--color-darkGreen));
+  text-decoration: none;
+}
+.row:nth-child(2) {
+  align-items: baseline;
 }
