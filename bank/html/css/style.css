@@ -43,12 +43,23 @@ html {
   line-height: 1.2em;
 }
 
-*, *:before, b:after {
+*, *:before, *:after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   outline: none;
   border: none;
+  transition: all ease .5s;
+}
+
+/* *:focus {
+  transform: scale(1.1);
+} */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .visually-hidden {
@@ -93,6 +104,7 @@ html {
 }
 .link {
   text-decoration: none;
+  position: relative;
 }
 .button {
   border-style: solid;
@@ -110,17 +122,24 @@ html {
   color: var(--color-white);
   border-color: var(--color-white);
 }
+.button--white:hover {
+  background: rgba(255,255,255,.2);
+}
 .button--yellow {
   color: var(--color-white);
   border-color: var(--color-yellow);
+}
+.button--yellow:hover {
+  background: rgba(225, 186, 0, .2);
 }
 /* header */
 .header {
   position: relative;
   justify-content: center;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top left;
   background-size: cover;
+  background-attachment: fixed;
   flex-flow: row wrap;
 }
 .header:before {
@@ -141,8 +160,11 @@ html {
   z-index: 2;
 }
 .brand {
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
+  flex-basis: 25%;
+  min-width: 300px;
+  text-decoration: none;
 }
 .brand__logo {
   position: relative;
@@ -166,6 +188,7 @@ html {
 .header__hot-links {
   position: relative;
   display: flex;
+  flex-basis: 35%;
 }
 .header__hot-link {
   margin-right: 10px;
@@ -217,29 +240,16 @@ html {
   z-index: 2;
 }
 .header__menu-items {
-  list-style: none;
-  margin: 0;
   padding: 0 30px;
   justify-content: flex-start;
 }
 .header__menu-item {
   position: relative;
-  background-image: url(../img/bg.jpg);
+  background-image: url('../img/bg.jpg');
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top left;
   background-size: cover;
   background-attachment: fixed;
-}
-.header__menu-item:before {
-  content: '';
-  position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #000;
-  opacity: .4;
 }
 .header__menu-link {
   min-width: 180px;
@@ -249,9 +259,22 @@ html {
   padding: 15px 10px;
   border-right: 1px solid rgba(255,255,255,.5);
   background-color: var(--color-green);
+  z-index: 2;
 }
 .header__menu-link.active {
   background: transparent;
+}
+.header__menu-item:after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: .4;
+  z-index: 1;
 }
 /* main */
 /* banner */
@@ -359,16 +382,18 @@ html {
   appearance: none;
   cursor: pointer;
 }
-.select>option::first-letter {
-  text-transform: uppercase;
+.select > option {
+  border: none;
+  outline: none;
+  background: #fff;
+}
+.select > option:hover {
+  background: #000;
 }
 /* partners */
 .partners {
   flex-flow: row nowrap;
   justify-content: space-between;
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 .partners__item-link {
   position: relative;
@@ -450,18 +475,13 @@ html {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  background-image: url('/img/cicons.png');
+  background-image: url('../img/cicons.png');
   background-repeat: no-repeat;
   background-position: 0 0;
 }
 /* right col */
 .col-one {
   justify-content: space-between;
-}
-.apps, .soc {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 .apps {
   padding: 5px 10px;
@@ -472,7 +492,7 @@ html {
   display: block;
   width: 16px;
   height: 17px;
-  background-image: url('/img/apps.png');
+  background-image: url('../img/apps.png');
   background-repeat: no-repeat;
 }
 .apple:after {
@@ -488,17 +508,13 @@ html {
   margin-left: 10px;
   background-position: -25px 1px;
 }
-.soc {
-}
-.soc__item {
-}
 .soc__item-link:after {
   content: '';
   position: relative;
   display: block;
   width: 30px;
   height: 30px;
-  background-image: url('/img/soc.png');
+  background-image: url('../img/soc.png');
   background-repeat: no-repeat;
 }
 .vk:after {
@@ -524,8 +540,6 @@ html {
 }
 /* footer menu */
 .footer__menu {
-  list-style: none;
-  padding: 0;
   margin: 45px 0 0 0;
   position: relative;
   display: flex;
