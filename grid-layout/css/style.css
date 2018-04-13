@@ -1,0 +1,32 @@
+@supports(display: grid) {
+  .grid {
+    position: relative;
+    display: grid;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    grid-template-areas: "header header"
+                         "main"
+                         "footer footer";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+  }
+  .grid__item {
+    outline: 1px solid rgba(0,0,0,.1);
+    padding: 15px;
+  }
+  .header {
+    grid-area: header;
+  }
+  .main {
+    grid-area: main;
+  }
+  .footer {
+    grid-area: footer;
+  }
+}
+
+.bigtext {
+  font-size: 24px;
+}
