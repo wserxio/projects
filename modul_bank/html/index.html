@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- header -->
+  <header class="header flex row--nowrap justify--space-between">
+    <!-- left-col -->
+    <div class="col flex float--left">
+      <div class="header__left-col flex align-items--center align-content--center">
+          <a href="" class="header__logo-container" tabindex="1">
+            <img src="src/logo.svg" alt="модуль банк" class="header__logo">
+          </a>
+          <div class="header__search-container">
+            <input type="text" class="header__search" placeholder="ПОИСК" method="POST" tabindex="2">
+          </div>
+        </div>
+        <!-- menu -->
+        <nav class="header__menu flex">
+          <ul class="header__menu-items flex row--nowrap align-items--center">
+            <li class="header__menu-item active">
+              <a href="" class="header__menu-item-link" tabindex="3">деньги</a>
+            </li>
+            <li class="header__menu-item hover--opacity">
+              <a href="" class="header__menu-item-link" tabindex="4">контакты</a>
+            </li>
+            <li class="header__menu-item hover--opacity dropdown" tabindex="5">
+              услуги
+              <ul class="header__submenu-items flex cols hidden animated fadeIn" tabindex="6">
+                <li class="header__submenu-item hover--opacity">
+                  <a href="" class="header__submenu-item-link" tabindex="7">оплата штрафов</a>
+                </li>
+                <li class="header__submenu-item hover--opacity">
+                  <a href="" class="header__submenu-item-link" tabindex="8">заполнение квитанций</a>
+                </li>
+                <li class="header__submenu-item hover--opacity">
+                  <a href="" class="header__submenu-item-link" tabindex="9">переоформление карты</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+    </div>
+    <div class="col flex grow-all justify--center">
+      <div class="header__button-add hover--opacity" tabindex="10"></div>
+    </div>
+    <div class="col flex float--right row--nowrap align-items--center">
+      <div class="header__right-col flex row--nowrap align-items--center">
+        <div class="header__bell hover--opacity animated bounceIn" tabindex="11">
+          <div class="header__bell-counter">2</div>
+        </div>
+        <div class="header__profile hover--opacity flex row--nowrap align-items--center" tabindex="12">ооо "родные просторы"</div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <article class="article flex cols can-close animated fadeIn">
+      <h1 class="article__title">платежное поручение № 5241234 от 23.09.2015</h1>
+      <div class="article__container grow-all">
+      <!-- block -->
+        <div class="operation">
+          <div class="operation__balance">-23 500,00 <span>&#8381;</span></div>
+          <div class="operation__account">
+            <span class="account__title">со счета: </span>
+            <span class="account__desc">Расчетный счет (***012345)</span>
+          </div>
+          <div class="operation__status">исполнен, 21 июня 15:33</div>
+        </div>
+        <!-- block -->
+        <div class="article__details">
+          <div class="details__company flex row--nowrap justify--space-between">
+            <div class="col">
+              <div class="row">
+                <ul class="company__details">
+                  <li class="company__detail company__title">ООО "Родные просторы"</li>
+                  <li class="company__detail">ИНН: 22341497819132</li>
+                  <li class="company__detail">Банк: ОАО Сбербанк</li>
+                  <li class="company__detail">БИК: 2352362365</li>
+                  <li class="company__detail">Счет: 40802810970010000395</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col advantages flex cols justify--space-between">
+              <div class="row">
+                <div class="col popup hover--opacity" data-fin-stat='...'>высокая финансовая устойчивость</div>
+                <div class="col">
+                  <div class="circle">88</div>                        
+                </div>
+              </div>
+              <div class="row">
+                <div class="col popup hover--opacity" data-trust='...'>высокая благонадежность</div>
+                <div class="col">
+                    <div class="circle">100</div>  
+                </div>
+              </div>
+              <div class="row">
+                <div class="col popup hover--opacity" data-credit='...'>кредитоспособность 44,5 млрд. ₽</div>
+                <div class="col">
+                    <div class="circle circle--filled">
+                      <div class="num">1</div>
+                      <div class="title">класс</div>
+                    </div>  
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="details__desc">Оплата за партию ромашек и одуванчиков по договору 14023-023 от 14.05.2015 г. Сумма 11430-00. В том числе НДС 18% - 1450,00 ₽</div>
+        </div>
+        <div class="article__attention">Комиссия банка: 70 р.<br/>Размер комиссии рассчитан автоматически согласно тарифу вашей компании и является ознакомительным. Точный размер комиссии определяется после передачи платежного документа на обработку в банк.
+        </div>
+      </div>
+      <div class="article__bottom-panel justify--center">
+        <ul class="article__bottom-panel-items flex row--nowrap">
+          <li class="article__bottom-panel-item button__repeat">повторить</li>
+          <li class="article__bottom-panel-item button__favorite">в избранное</li>
+          <li class="article__bottom-panel-item button__question">спросить</li>
+          <li class="article__bottom-panel-item button__more">действия</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+  <div class="modal__wrapper hidden">
+    <div class="modal">
+      <div class="modal__close-button">X</div>
+      <h2 class="modal__title">Универсальное модальное окно</h2>
+    </div>
+  </div>
+  <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>
