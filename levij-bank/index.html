@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app flex row-nowrap">
+
+    <aside class="app-sidebar flex column">
+      <nav class="app-nav">
+        <ul class="app-menu flex column">
+          <li class="app-menu__item menu-icon-home app-menu__item--active">
+            <a href="index.html">мои заявки</a>
+          </li>
+          <li class="app-menu__item menu-icon-news">
+            <a href="news.html">новости</a>
+          </li>
+          <li class="app-menu__item menu-icon-convert">
+            <a href="convert.html">конвертация баллов</a>
+          </li>
+          <li class="app-menu__item menu-icon-manager">
+            <a href="personal-manager.html">личный менеджер</a>
+          </li>
+          <li class="app-menu__item menu-icon-messenger">
+            <a href="messenger.html">чат с менеджером</a>
+          </li>
+          <li class="app-menu__open-button">свернуть</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="app-body">
+      <section class="flex column" data-section-title="Мои заявки">
+        <header class="section__header flex row-nowrap justify-content-spaced">
+          <button class="button section__header-button button-back button-color--green"></button>
+          <div class="section__header-itemitem">
+            <h1 class="section__header-title">мои заявки</h1>
+          </div>
+          <button class="button section__header-button button-filter button-color--green"></button>
+          <ul class="section__header-submenu hidden animated fadeIn">
+            <p>Сортировка</p>
+            <li><a href="/?sort=desc">по имени</a></li>
+            <li><a href="?sort=date">по дате</a></li>
+            <li><a href="?sort=status">по статусу</a></li>
+          </ul>
+        </header>
+        <div class="section__body">
+          <ul class="order-list flex column">
+            <li>
+              <a href="" data-date="" data-status="">Филимонов Ким Егорович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Ядрищенский Бронислав Родионович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Островский Афанасий Саввевич</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Тимирёв Иларион Панкратиевич</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Низамутдинов Чеслав Сидорович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Русских Никифор Давыдович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Кондратенко Аркадий Вячеславович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Прибылов Феофан Ерофеевич</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Филимонов Ким Егорович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Ядрищенский Бронислав Родионович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Островский Афанасий Саввевич</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Тимирёв Иларион Панкратиевич</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Низамутдинов Чеслав Сидорович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Русских Никифор Давыдович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Кондратенко Аркадий Вячеславович</a>
+            </li>
+            <li>
+              <a href="" data-date="" data-status="">Прибылов Феофан Ерофеевич</a>
+            </li>
+          </ul>
+          <button class="button js-button--has-url order-list__button button--white" data-url="./add-order.html">+</button>
+        </div>
+        <footer class="section__footer"></footer>
+      </section>
+    </main>
+
+  </div>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

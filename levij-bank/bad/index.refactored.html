@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app flex row-nowrap">
+
+    <aside class="app_sidebar flex column animated slideInLeft">
+      <nav class="app_nav">
+        <ul class="app_menu flex column">
+          <li class="app_menu__item menu_icon-home app_menu__item--active"><a href="">мои заявки</a></li>
+          <li class="app_menu__item menu_icon-news"><a href="">новости</a></li>
+          <li class="app_menu__item menu_icon-convert"><a href="">конвертация баллов</a></li>
+          <li class="app_menu__item menu_icon-manager"><a href="">личный менеджер</a></li>
+          <li class="app_menu__item menu_icon-messenger"><a href="">чат с менеджером</a></li>
+          <li class="app_menu__open_button">свернуть</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="app_body">
+      <section class="my-invites" data-section-title="Мои заявки">
+        <ul class="invite-list">
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Филимонов Ким Егорович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Ядрищенский Бронислав Родионович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Островский Афанасий Саввевич</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Тимирёв Иларион Панкратиевич</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Низамутдинов Чеслав Сидорович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Русских Никифор Давыдович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Кондратенко Аркадий Вячеславович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Прибылов Феофан Ерофеевич</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Филимонов Ким Егорович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Ядрищенский Бронислав Родионович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Островский Афанасий Саввевич</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Тимирёв Иларион Панкратиевич</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Низамутдинов Чеслав Сидорович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Русских Никифор Давыдович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Кондратенко Аркадий Вячеславович</a>
+          </li>
+          <li class="invite-list__item">
+            <a href="" class="invite-list__item-link">Прибылов Феофан Ерофеевич</a>
+          </li>
+        </ul>
+        <a href="" class="app_footer__add-button btn"></a>
+      </section>
+      <section class="add-invite" data-section-title="Добавить заявку">
+        <form action="" method="POST">
+          <div class="input_container">
+            <label for="person-lastname">фамилия</label>
+            <input type="text" id="person-lastname" required>
+          </div>
+          <div class="input_container">
+            <label for="person-name">имя</label>
+            <input type="text" id="person-name" required>
+          </div>
+          <div class="input_container">
+            <label for="person-second-name">отчество</label>
+            <input type="text" id="person-second-name" required>
+          </div>
+          <div class="input_container">
+            <label for="person-bith-date">дата рождения</label>
+            <input type="text" id="person-bith-date" required placeholder="__.__.____">
+          </div>
+          <div class="input_container">
+            <label for="person-tel">мобильный телефон</label>
+            <input type="tel" id="person-tel" required placeholder="+7 (___) ___ __ __">
+          </div>
+          <div class="add-invite__fieldset-title">паспортные данные</div>
+          <div class="inputs-row">
+            <div class="input-col">
+              <div class="input_container">
+                <label for="person-pass-series">серия паспорта</label>
+                <input type="text" id="person-pass-series" required placeholder="__ __">
+              </div>
+            </div>
+            <div class="input-col">
+              <div class="input_container">
+                <label for="person-pass-num">номер паспорта</label>
+                <input type="text" id="person-pass-num" required placeholder="__ __ __">
+              </div>
+            </div>
+            <div class="input_container">
+              <label for="person-pass-date">дата выдачи</label>
+              <input type="date" id="person-pass-date" required placeholder="__.__.____">
+            </div>
+          </div>
+          <div class="input_container">
+            <input type="file" id="file">
+          </div>
+          <input type="submit" value="подать заявку">
+        </form>
+      </section>
+      <section class="invite" data-section-title="Заявка по клиенту">
+        <div class="invite__person_container">
+          <h3 class="invite__person_title">Иванов Иван Иванович</h3>
+          <ul class="invite__actions_menu hidden animated slideInDown">
+            <li class="invite__actions_menu_item">
+              <a href="" class="invite__actions_menu_a">подробная информация по заявке</a>
+            </li>
+            <li class="invite__actions_menu_item">
+              <a href="" class="invite__actions_menu_a">редактировать информацию</a>
+            </li>
+            <li class="invite__actions_menu_item">
+              <a href="" class="invite__actions_menu_a">добавить файлы в заявку</a>
+            </li>
+            <li class="invite__actions_menu_item">
+              <a href="" class="invite__actions_menu_a">оплатить баллами услугу</a>
+            </li>
+            <li class="invite__actions_menu_item">
+              <a href="" class="invite__actions_menu_a">описание решения по заявке</a>
+            </li>
+            <li class="invite__actions_menu_item">
+              <a href="" class="invite__actions_menu_a">задать вопрос менеджеру</a>
+            </li>
+          </ul>
+        </div>
+        <div class="invite__status_container">
+          <div class="row">
+            <div class="invite__status-title">статус</div>
+            <div class="invite__status-label">проверка кредитной истории пройдена успешно</div>
+          </div>
+          <div class="row">
+            <div class="invite__status-title">дата и время создания</div>
+            <div class="invite__status-label">23.04.2018 11:18:11</div>
+          </div>
+          <div class="row">
+            <div class="invite__status-title">сумма, руб.</div>
+            <div class="invite__status-label">2 000 000</div>
+          </div>
+          <div class="row">
+            <div class="invite__status-title">срок, лет</div>
+            <div class="invite__status-label">15</div>
+          </div>
+          <div class="row">
+            <div class="invite__status-title">процент</div>
+            <div class="invite__status-label">9,75</div>
+          </div>
+        </div>
+      </section>
+      <section class="messenger column justify-content-spaced" data-section-title="Чат с менеджером">
+        <div class="messenger__header">
+          <h3 class="messenger__title">Иванов Иван Иванович</h3>
+        </div>
+        <div class="messenger__body">
+          <ul class="messenger__messages">
+            <li class="messenger__message message_question">
+              <span>Добрый день! Уточните, пожалуйста, как скоро будет принято решение по заявке?</span>
+              <time>11:05</time>
+            </li>
+            <li class="messenger__message message_answer">
+              <span>Здравствуйте!</span>
+              <time>11:06</time>
+            </li>
+          </ul>
+        </div>
+        <div class="messenger__footer">
+          <form action="" method="post">
+            <textarea name="" id="" placeholder="Введите сообщение" class="messenger__footer_text_area" required contenteditable="true"></textarea>
+            <input type="submit" value="" class="btn messenger__btn_submit">
+          </form>
+        </div>
+      </section>
+      <section class="personal-manager" data-section-title="Персональный менеджер">
+        <article class="personal_manager__body">
+          <div class="row">
+            <div class="col col-1">
+              <div class="personal_manager__photo" style="background-image: url('http://student.rggu.ru/foto/20130418-167d7734816e62de165cc9ee93bb99f7.jpg')"></div>
+              <img src="http://student.rggu.ru/foto/20130418-167d7734816e62de165cc9ee93bb99f7.jpg" alt="Силакова Валерия Алексеевна" class="visually-hidden">
+            </div>
+            <div class="col col-3 flex row-wrap align-content-center">
+              <h4 class="personal_manager__title">Силакова Валерия Алексеевна</h4>
+              <div class="col-1">
+                <a href="tel:+79139421361" class="btn btn--yellow-bordered">позвонить на мобильный</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <div class="personal_manager__address">
+                <p>
+                  <i class="fa fa-building"></i>
+                  <span>Дополнительный офис "Центральный"</span>
+                </p>
+                <p>
+                  <i class="fa fa-map-marker"></i>
+                  <span>г.Новосибирск, ул. Орджоникидзе, 33</span>
+                </p>
+                <p>
+                  <i class="fa fa-mobile"></i>
+                  <span>8-913-942-13-61</span>
+                </p>
+                <p>
+                  <i class="fa fa-phone"></i>
+                  <span>+7 (383) 3-600-900 вн 6049</span>
+                </p>
+                <p>
+                  <i class="fa fa-at"></i>
+                  <span>svaa@nskbl.ru</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col-1">
+              <a href="" class="btn btn--yellow-bordered">отправить отзыв</a>
+            </div>
+            <div class="col col-1">
+              <a href="" class="btn btn--yellow-bordered">сменить менеджера</a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="convert section--active">
+        <div class="row">
+          <p class="convert__balance">Баланс:
+            <span>10 287</span>баллов</p>
+        </div>
+        <article class="row">
+          <h2 class="article__title">Конвертация баллов</h2>
+          <p class="article__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свою текстов парадигматическая
+            буквоград силуэт он диких, маленькая родного маленький последний даль рыбными за, дорогу текста до взобравшись.
+            За предупредила она своих предупреждал путь текста переписывается оксмокс курсивных? Грамматики, меня.</p>
+        </article>
+        <div class="row">
+          <div class="col col-2">
+            <a href="" class="btn btn--yellow-bordered">Заказать карту</a>
+          </div>
+        </div>
+        <form action="" method="post">
+          <p class="form__text">Я бы хотел(а) сконвертировать</p>
+          <div class="row align-items-stretch">
+            <div class="col col-3 flex row-nowrap align-items-stretch">
+              <input type="number" name="" id="" min="0" minlength="1" value="0">
+            </div>
+            <div class="col col-1">
+              <input type="submit" value="Сконвертировать баллы" class="btn btn--green">
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+  </div>
+
+
+  <script>
+    'use strict';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener('click', (event) => {
+        console.log(event.target);
+
+        // main menu
+        event.target.classList.contains('app_menu__open_button') ?
+          document.getElementsByClassName('app_sidebar')[0].classList.toggle('sidebar--expand') :
+          null;
+
+        // person menu
+        event.target.classList.contains('invite__person_title') ?
+          document.getElementsByClassName('invite__actions_menu')[0].classList.toggle('hidden') :
+          null;
+
+        // messenger message add
+        function messageAdd() {
+          const message = document.createElement('li'),
+            messageText = document.createElement('span'),
+            messageTime = document.createElement('time');
+          let text = document.getElementsByClassName('messenger__footer_text_area')[0],
+            date = new Date();
+
+          messageText.innerHTML = text.value;
+          messageTime.innerHTML = `${date.toLocaleDateString()} - ${date.toLocaleTimeString()}`;
+
+          message.classList = 'messenger__message message_question';
+          message.appendChild(messageText);
+          message.appendChild(messageTime);
+
+          document.getElementsByClassName('messenger__messages')[0].appendChild(message);
+        }
+        if (event.target.classList.contains('messenger__btn_submit')) {
+          event.preventDefault();
+          messageAdd();
+        }
+
+        // messenger auto padding
+        (document.getElementsByClassName('messenger__messages')[0].clientHeight >= document.getElementsByClassName(
+          'messenger__body')[0].clientHeight) ?
+        document.getElementsByClassName('messenger__body')[0].style.paddingBottom = '5rem':
+          null;
+
+
+      })
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app flex row-nowrap">
+
+    <aside class="app-sidebar flex column">
+      <nav class="app-nav">
+        <ul class="app-menu flex column">
+          <li class="app-menu__item menu-icon-home">
+            <a href="index.html">мои заявки</a>
+          </li>
+          <li class="app-menu__item menu-icon-news">
+            <a href="news.html">новости</a>
+          </li>
+          <li class="app-menu__item menu-icon-convert">
+            <a href="convert.html">конвертация баллов</a>
+          </li>
+          <li class="app-menu__item menu-icon-manager">
+            <a href="personal-manager.html">личный менеджер</a>
+          </li>
+          <li class="app-menu__item menu-icon-messenger app-menu__item--active">
+            <a href="messenger.html">чат с менеджером</a>
+          </li>
+          <li class="app-menu__open-button">свернуть</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="app-body">
+      <section class="flex column" data-section-title="Чат с менеджером">
+        <header class="section__header flex row-nowrap justify-content-spaced">
+          <button class="button section__header-button button-back button-color--green"></button>
+          <div class="section__header-item">
+            <h1 class="section__header-title">чат с менеджером</h1>
+          </div>
+        </header>
+        <div class="section__body flex row-wrap align-items-start align-content-start padding--default animated slideInDown">
+          <article class="messenger-message message-question flex column">
+            <span>Здравствуйте! Подскажите, когда можно ждать ответа по заявке?</span>
+            <time>10:10</time>
+          </article>
+          <article class="messenger-message message-answer flex column">
+            <span>Здравствуйте! В течение недели.</span>
+            <time>10:10</time>
+          </article>
+          <article class="messenger-message message-question flex column">
+            <span>Спасибо!</span>
+            <time>10:10</time>
+          </article>
+          <article class="messenger-message message-question flex column">
+            <span>Будут вопросы - обращайтесь!</span>
+            <time>10:10</time>
+          </article>
+        </div>
+        <div class="messenger__footer">
+          <form action="" method="post" class="messenger-form flex row-nowrap">
+            <textarea name="" id="" placeholder="Введите сообщение" class="messenger__footer-text-area" required contenteditable="true"></textarea>
+            <button class="button messenger-form__submit-button section-button--yellow-bordered" type="submit"></button>
+          </form>
+          <audio src="chat/Blip_Select.wav"></audio>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

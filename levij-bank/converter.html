@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app flex row-nowrap">
+
+    <aside class="app_sidebar flex column animated slideInLeft">
+      <nav class="app_nav">
+        <ul class="app_menu flex column">
+          <li class="app_menu__item menu_icon-home app_menu__item--active"><a href="">мои заявки</a></li>
+          <li class="app_menu__item menu_icon-news"><a href="">новости</a></li>
+          <li class="app_menu__item menu_icon-convert"><a href="">конвертация баллов</a></li>
+          <li class="app_menu__item menu_icon-manager"><a href="">личный менеджер</a></li>
+          <li class="app_menu__item menu_icon-messenger"><a href="">чат с менеджером</a></li>
+          <li class="app_menu__open_button">свернуть</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="app_body">
+      <section class="convert">
+        <div class="row">
+          <p class="convert__balance">Баланс:
+            <span>10 287</span>баллов</p>
+        </div>
+        <article class="row">
+          <h2 class="article__title">Конвертация баллов</h2>
+          <p class="article__text">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Свою текстов парадигматическая
+            буквоград силуэт он диких, маленькая родного маленький последний даль рыбными за, дорогу текста до взобравшись.
+            За предупредила она своих предупреждал путь текста переписывается оксмокс курсивных? Грамматики, меня.</p>
+        </article>
+        <div class="row">
+          <div class="col col-2">
+            <a href="" class="btn btn--yellow-bordered">Заказать карту</a>
+          </div>
+        </div>
+        <form action="" method="post">
+          <p class="form__text">Я бы хотел(а) сконвертировать</p>
+          <div class="row align-items-stretch">
+            <div class="col col-3 flex row-nowrap align-items-stretch">
+              <input type="number" name="" id="" min="0" minlength="1" value="0">
+            </div>
+            <div class="col col-1">
+              <input type="submit" value="Сконвертировать баллы" class="btn btn--green">
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

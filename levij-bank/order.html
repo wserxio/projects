@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="app flex row-nowrap">
+
+    <aside class="app-sidebar flex column">
+      <nav class="app-nav">
+        <ul class="app-menu flex column">
+          <li class="app-menu__item menu-icon-home app-menu__item--active">
+            <a href="index.html">мои заявки</a>
+          </li>
+          <li class="app-menu__item menu-icon-news">
+            <a href="news.html">новости</a>
+          </li>
+          <li class="app-menu__item menu-icon-convert">
+            <a href="convert.html">конвертация баллов</a>
+          </li>
+          <li class="app-menu__item menu-icon-manager">
+            <a href="personal-manager.html">личный менеджер</a>
+          </li>
+          <li class="app-menu__item menu-icon-messenger">
+            <a href="messenger.html">чат с менеджером</a>
+          </li>
+          <li class="app-menu__open-button">свернуть</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="app-body">
+      <section class="flex column">
+        <header class="section__header flex row-nowrap justify-content-spaced">
+          <button class="button section__header-button button-back button-color--green"></button>
+          <div class="section__header-itemitem">
+            <h1 class="section__header-title">заявка по клиенту</h1>
+          </div>
+        </header>
+        <div class="section__body animated slideInDown">
+          <div class="order__person-container">
+            <h3 class="order__person-title">Иванов Иван Иванович</h3>
+            <ul class="order__actions-menu hidden animated slideInDown">
+              <li class="order__actions-menu-item">
+                <a href="" class="order__actions-menu-a">подробная информация по заявке</a>
+              </li>
+              <li class="order__actions_menu_item">
+                <a href="" class="order__actions-menu-a">редактировать информацию</a>
+              </li>
+              <li class="order__actions_menu_item">
+                <a href="" class="order__actions-menu-a">добавить файлы в заявку</a>
+              </li>
+              <li class="order__actions_menu_item">
+                <a href="" class="order__actions-menu-a">оплатить баллами услугу</a>
+              </li>
+              <li class="order__actions_menu_item">
+                <a href="" class="order__actions-menu-a">описание решения по заявке</a>
+              </li>
+              <li class="order__actions_menu_item">
+                <a href="" class="order__actions-menu-a">задать вопрос менеджеру</a>
+              </li>
+            </ul>
+          </div>
+          <div class="order__status-container">
+            <div class="row">
+              <div class="order__status-title">статус</div>
+              <div class="order__status-label">проверка кредитной истории пройдена успешно</div>
+            </div>
+            <div class="row">
+              <div class="order__status-title">дата и время создания</div>
+              <div class="order__status-label">23.04.2018 11:18:11</div>
+            </div>
+            <div class="row">
+              <div class="order__status-title">сумма, руб.</div>
+              <div class="order__status-label">2 000 000</div>
+            </div>
+            <div class="row">
+              <div class="order__status-title">срок, лет</div>
+              <div class="order__status-label">15</div>
+            </div>
+            <div class="row">
+              <div class="order__status-title">процент</div>
+              <div class="order__status-label">9,75</div>
+            </div>
+          </div>
+        </div>
+        <footer class="section__footer"></footer>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
