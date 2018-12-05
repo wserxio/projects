@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" class="height--full">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <title>Document</title>
+  <style>
+    *,
+    *:before,
+    *:after {
+      transition: all ease .3s;
+    }
+
+    html {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #dfe4e9;
+      color: #647a88;
+    }
+
+    a {
+      color: #647a88;
+      text-decoration: underline;
+      font-weight: 600;
+    }
+    a::first-letter,
+    a > *::first-letter {
+      text-transform: uppercase;
+    }
+
+    a:hover {
+      color: #404b3f;
+    }
+
+    .height--full {
+      height: 100vh;
+    }
+
+    .grid {
+      display: grid;
+    }
+
+    .igrid {
+      display: inline-grid;
+    }
+
+    .layout {
+      grid-template-rows: min-content 1fr;
+      grid-template-columns: 250px auto 300px;
+      background: transparent;
+    }
+
+    .layout__header {
+      position: sticky;
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1 0 100%;
+      justify-content: space-between;
+      align-items: center;
+      top: 0;
+      grid-column: 1 /4;
+      grid-row: 1 / 2;
+      padding: 1rem;
+      background: #fcfcfc;
+      box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .1);
+      z-index: 9;
+    }
+
+    .header__logo h1 {
+      font-size: 1rem;
+      line-height: 1.4;
+      padding: 1rem 0;
+      text-transform: uppercase;
+      font-weight: 100;
+    }
+
+    menu {
+      font-size: 0;
+    }
+
+    menu a {
+      font-size: 1rem;
+    }
+
+    .header__menu a {
+      position: relative;
+      font-size: 1.4rem;
+      line-height: 1;
+      font-weight: 100;
+      padding: 1rem;
+      font-variant: small-caps;
+      text-decoration: none;
+    }
+
+    .header__menu a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: radial-gradient(#647a88, #dfe4e9);
+      border-radius: 50%;
+    }
+
+    .header__menu a:hover:after {
+      width: 100%;
+    }
+
+    /* aside left */
+    .side--left {
+      background: #99a8ac;
+    }
+    .side--right {
+      background: #fcfcfc;
+      box-shadow: -1px 0 5px 0 rgba(0,0,0,.1);
+    }
+
+    /* main */
+    .layout__main {
+      padding: 2rem 1rem;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(3, minmax(300px, 1fr));
+      grid-template-areas: 'article--accounts article--accounts article--actions'
+        'article--loyalty article--risks article--duty'
+        'article--cash article--payments article--oea';
+    }
+
+    .main__article {
+      position: relative;
+      grid-template-rows: 2rem auto 1rem;
+      grid-template-areas: 'article__header'
+        'article__info'
+        'article__footer';
+      grid-gap: .5rem;
+      padding: .5rem 1rem 1rem;
+      background: #fcfcfc;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+      z-index: 1;
+    }
+
+    .main__article:hover {
+      box-shadow: 0 3px 7px 0 rgba(0,0,0,.1);
+      z-index: 2;
+    }
+
+    .main__article:hover .article__settings {
+      display: block!important;
+    }
+
+    .article--accounts {
+      grid-area: article--accounts;
+    }
+
+    .article--actions {
+      grid-area: article--actions;
+    }
+
+    .article--loyalty {
+      grid-area: article--loyalty;
+    }
+
+    .article--risks {
+      grid-area: article--risks;
+    }
+
+    .article--duty {
+      grid-area: article--duty;
+    }
+
+    .article--cash {
+      grid-area: article--cash;
+    }
+
+    /* article inside */
+    .article__header {
+      grid-area: article__header;
+    }
+
+    .article__header h2 {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+
+    .article__header h2::first-letter {
+      text-transform: uppercase;
+    }
+
+    .article__info {
+      grid-area: article__info;
+    }
+
+    .article__footer {
+      grid-area: article__footer;
+    }
+
+    .article__footer a {
+      font-size: .8rem;
+      line-height: 1rem;
+    }
+
+    .article__footer::first-letter {
+      text-transform: uppercase;
+    }
+
+    .article__settings {
+      position: absolute;
+      display: none;
+      top: .5rem;
+      right: .5rem;
+    }
+
+    .article__settings .cog {
+      font-size: 2rem;
+      line-height: 1;
+      padding: 0 .5rem;
+      color: #647a88;
+      cursor: pointer;
+    }
+
+    /* aside right */
+
+  </style>
+</head>
+
+<body class="height--full">
+  <section class="grid layout height--full">
+    <header class="layout__header header">
+      <div class="header__col">
+        <a class="header__logo" href="">
+          <h1>онлайн-офис</h1>
+        </a>
+      </div>
+      <div class="header__col">
+        <menu class="header__menu">
+          <a href="">home</a>
+          <a href="">store</a>
+          <a href="">profile</a>
+          <a href="">news</a>
+          <a href="">about</a>
+        </menu>
+      </div>
+    </header>
+    <aside class="layout__side side--left"></aside>
+    <main class="grid layout__main main">
+      <article class="igrid main__article article--accounts">
+        <header class="article__header">
+          <h2>Мои счета</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          <a href="">подробнее</a>
+        </footer>
+        <div class="article__settings settings">
+          <span class="cog">&#9881;</span>
+        </div>
+      </article>
+      <article class="igrid main__article article--actions">
+        <header class="article__header">
+          <h2>Последние действия</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+      <article class="igrid main__article article--loyalty">
+        <header class="article__header">
+          <h2>Лояльность</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+      <article class="igrid main__article article--risks">
+        <header class="article__header">
+          <h2>Риски бизнеса</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+      <article class="igrid main__article article--duty">
+        <header class="article__header">
+          <h2>Налоги</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+      <article class="igrid main__article article--cash">
+        <header class="article__header">
+          <h2>Обороты</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+      <article class="igrid main__article article--payments">
+        <header class="article__header">
+          <h2>Зарплата</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+      <article class="igrid main__article article--oea">
+        <header class="article__header">
+          <h2>ВЭД</h2>
+        </header>
+        <div class="article__info">
+          info
+        </div>
+        <footer class="article__footer">
+          footer
+        </footer>
+      </article>
+    </main>
+    <aside class="layout__side side--right"></aside>
+  </section>
+</body>
+
+</html>

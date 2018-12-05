@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://nskbl.ru/css/style.css">
+  <link rel="stylesheet" href="css/ec-calendar.css">
+  <title>Document</title>
+</head>
+
+<body class="page-inner">
+  <div class="mw">
+    <div class="mw-inner">
+      <div class="w">
+        <div class="uclp__infobox uclp__infobox_dark uclp__block">
+          <div class="ec-wrapper">
+                <div class="ec-calendar ec-col"></div>
+                <div class="ec-times ec-col">
+                  <select name="" id="" class="selectInput"></select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script>
+    $('.ec-calendar').datepicker({
+      monthNames: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь",
+        "Ноябрь", "Декабрь"
+      ],
+      dayNamesMin: ["Вс", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб"],
+      firstDay: 1,
+      nextText: ">",
+      prevText: "<",
+      beforeShowDay: function (date) {
+        return [true, date.getTime(), ''];
+      }
+    });
+
+    document.addEventListener('click', function(e) {
+      e.target === 'a' ? check(e.target.parentNode) : null;
+    })
+
+    function check(item) {
+      console.log(item.className);
+    }
+
+  </script>
+</body>
+
+</html>

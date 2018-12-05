@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+@media screen and (max-width: 520px) {
+  table {
+    width: 100%;
+  }
+  table td:before {
+      content: attr(data-title)":";
+      float: left;
+      min-width: 50%;
+      font-weight: bold;
+  }
+  table td:after {
+    content: '';
+    position: relative;
+    display: block;
+    border-bottom: 1px solid #868686;
+  }
+  table tr {
+      margin: 10px 0;
+      padding: 10px;
+      display: block;
+      background: rgba(0,0,0,.1);
+  }
+  table td {
+      display: block;
+      overflow: hidden;
+ 
+  }
+  table thead {
+      display: none;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Carrier Tracking</th>
+        <th>Chargeable Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-title="Date">2015/08/10</td>
+        <td data-title="Carrier Tracking">2636128-713</td>
+        <td data-title="Chargeable Weight">0.2 Pounds (lbs)</td>
+      </tr>
+      <tr>
+        <td data-title="Date">2015/08/11</td>
+        <td data-title="Carrier Tracking">26328-713</td>
+        <td data-title="Chargeable Weight">0.4 Pounds (lbs)</td>
+      </tr>
+      <tr>
+        <td data-title="Date">2015/08/12</td>
+        <td data-title="Carrier Tracking">2636326-453</td>
+        <td data-title="Chargeable Weight">0.1 Pounds (lbs)</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <script>
+  </script>
+</body>
+</html>

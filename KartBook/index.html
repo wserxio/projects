@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *, *:before, *:after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      transition: all cubic-bezier(0.6, 0.04, 0.98, 0.335) .5s;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      background: linear-gradient(45deg, rgb(0, 174, 255), rgb(225, 0, 255));
+    }
+    .garage {
+      display: flex;
+      flex-flow: row nowrap;
+      flex: 1 0 100%;
+      justify-content: space-between;
+      margin: 0 auto;
+      padding: 30px;
+    }
+    .kart {
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      flex: 1;
+      padding: 15px;
+      background: rgba(255,255,255,.1);
+      box-shadow: 0 30px 50px -20px rgba(0,0,0,.3);
+      cursor: pointer;
+      overflow: hidden;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      margin: 10px;
+    }
+    .kart:before {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      right: -100%;
+      bottom: -100%;
+      background: transparent;
+      z-index: -1;
+    }
+    .kart:hover:before {
+      transform: rotate(180deg);
+      background: rgba(255,255,255,.3)
+    }
+    .kart__img {
+      max-width: 100%;
+    }
+    .kart:hover .kart__img {
+      transform: rotate(5turn)
+    }
+  </style>
+</head>
+<body>
+  <table border="1" width="100%" cellpadding="10" cellspacing="10">
+    <tbody></tbody>
+  </table>
+
+  <!-- templates -->
+  <div class="templates">
+    <div class="garage">
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+      <div class="kart">
+        <img src="img/wheel.svg" alt="" class="kart__img">
+      </div>
+    </div>
+  </div>
+
+  <script src="js/core.js"></script>
+  <script src="js/initialisation.js"></script>
+</body>
+</html>
